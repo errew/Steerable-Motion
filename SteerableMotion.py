@@ -814,7 +814,7 @@ class VideoContinuationGenerator:
         return {
             "required": {
                 "input_video_frames": ("IMAGE", {"tooltip": "Input video frames to create continuation from."}),
-                "total_output_frames": ("INT", {"default": 81, "min": 1, "max": 81, "step": 4, "tooltip": "Total number of frames for the output continuation video. Must satisfy: (frames - 1) divisible by 4."}),
+                "total_output_frames": ("INT", {"default": 81, "min": 1, "max": 10000, "step": 4, "tooltip": "Total number of frames for the output continuation video. Must satisfy: (frames - 1) divisible by 4."}),
                 "overlap_frames": ("INT", {"default": 3, "min": 1, "max": 50, "step": 1, "tooltip": "Number of frames from the end of input video to use as overlap at the start."}),
                 "empty_frame_fill_level": ("FLOAT", {"default": 0.5, "min": 0.0, "max": 1.0, "step": 0.01, "tooltip": "Grayscale level (0.0 black, 1.0 white) for empty continuation frames."}),
             },
